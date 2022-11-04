@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class BottomButtonWidget extends StatelessWidget {
-  const BottomButtonWidget({
+class BottomButton extends StatelessWidget {
+  const BottomButton({
     Key? key,
   }) : super(key: key);
 
@@ -17,7 +17,7 @@ class BottomButtonWidget extends StatelessWidget {
           )),
       child: Container(
         width: 300,
-        height: 50,
+        height: 65,
         alignment: Alignment.center,
         child: const Text(
           'Continue',

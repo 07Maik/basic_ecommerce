@@ -1,8 +1,9 @@
-import 'dart:ui';
+import 'package:flutter/material.dart';
+
+import 'package:font_awesome_flutter/font_awesome_flutter.dart'
+    show FontAwesomeIcons;
 
 import 'package:basic_ecommerce/widgets/price_button_widget.dart';
-import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../widgets/button_bottom_widget.dart';
 
@@ -13,13 +14,12 @@ class EcommerceScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: const Icon(
-          Icons.arrow_back,
-          color: Colors.black,
-        ),
-        backgroundColor: Colors.white,
-        elevation: 0,
-      ),
+          leading: const Icon(
+            Icons.arrow_back,
+            color: Colors.black,
+          ),
+          backgroundColor: Colors.white,
+          elevation: 0),
       backgroundColor: Colors.white,
       body: SingleChildScrollView(
         child: Column(
@@ -38,12 +38,12 @@ class EcommerceScreen extends StatelessWidget {
       ),
       bottomNavigationBar: Row(
         mainAxisAlignment: MainAxisAlignment.center,
-        children: const [BottomButtonWidget()],
+        children: const [BottomButton()],
       ),
     );
   }
 
-  Container title() {
+  Widget title() {
     return Container(
       alignment: Alignment.center,
       child: const Text(
@@ -86,7 +86,7 @@ class EcommerceScreen extends StatelessWidget {
 
     return Container(
       margin: const EdgeInsets.symmetric(vertical: 30.0),
-      height: (priceButton.length / 2) * 80,
+      height: ((priceButton.length / 2) * 80) + 1,
       child: GridView.count(
         physics: const NeverScrollableScrollPhysics(),
         crossAxisCount: 2,
